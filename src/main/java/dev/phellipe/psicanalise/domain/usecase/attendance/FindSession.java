@@ -13,14 +13,14 @@ import org.springframework.stereotype.Component;
 @Component
 public record FindSession(SessionRepositoryFacade repositoryFacade) {
 
-    public Page<Session> execute(Session filter, Pageable pageable){
+    public Page<Session> execute(Session filter, Pageable pageable) {
         var filters = Example.of(filter,
                 ExampleMatcher
                         .matching()
                         .withIgnoreCase()
                         .withIgnoreNullValues()
-                        .withStringMatcher( ExampleMatcher.StringMatcher.CONTAINING)
-        ) ;
+                        .withStringMatcher(ExampleMatcher.StringMatcher.CONTAINING)
+        );
         return repositoryFacade.findAll(filters, pageable);
     }
 }

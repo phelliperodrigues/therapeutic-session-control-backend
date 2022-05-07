@@ -12,7 +12,7 @@ import java.util.UUID;
 @Component
 public record DeleteSession(SessionRepositoryFacade repositoryFacade) {
 
-    public void execute(UUID id){
+    public void execute(UUID id) {
         repositoryFacade.findById(id).ifPresentOrElse(session -> {
             repositoryFacade.delete(session);
             log.info("Sessão deletada com sucesso! id {}", id);

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 public record FetchAllCustomer(
         CustomerRepositoryFacade customerRepository) {
 
-    public Page<Customer> execute(Pageable pageable){
+    public Page<Customer> execute(Pageable pageable) {
         log.info("Buscando todos os clientes");
         return customerRepository.findAll(pageable);
     }

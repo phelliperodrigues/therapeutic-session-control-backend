@@ -12,7 +12,7 @@ import java.util.UUID;
 @Component
 public record DeleteCustomer(CustomerRepositoryFacade customerRepository) {
 
-    public void execute(UUID id){
+    public void execute(UUID id) {
         customerRepository.findById(id).ifPresentOrElse(customer -> {
             customerRepository.delete(customer);
             log.info("Cliente deletado com sucesso! id {}", id);

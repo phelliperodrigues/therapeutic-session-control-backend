@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 public record FetchAllSession(
         SessionRepositoryFacade repositoryFacade) {
 
-    public Page<Session> execute(Pageable pageable){
+    public Page<Session> execute(Pageable pageable) {
         log.info("Buscando todos as sessões");
         return repositoryFacade.findAll(pageable);
     }

@@ -13,14 +13,14 @@ import org.springframework.stereotype.Component;
 @Component
 public record FindCustomer(CustomerRepositoryFacade customerRepository) {
 
-    public Page<Customer> execute(Customer filter, Pageable pageable){
+    public Page<Customer> execute(Customer filter, Pageable pageable) {
         var filters = Example.of(filter,
                 ExampleMatcher
                         .matching()
                         .withIgnoreCase()
                         .withIgnoreNullValues()
-                        .withStringMatcher( ExampleMatcher.StringMatcher.CONTAINING)
-        ) ;
+                        .withStringMatcher(ExampleMatcher.StringMatcher.CONTAINING)
+        );
         return customerRepository.findAll(filters, pageable);
     }
 }

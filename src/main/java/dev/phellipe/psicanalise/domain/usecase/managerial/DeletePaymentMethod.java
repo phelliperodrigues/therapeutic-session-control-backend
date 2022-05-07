@@ -12,7 +12,7 @@ import java.util.UUID;
 @Component
 public record DeletePaymentMethod(PaymentMethodRepositoryFacade paymentMethodRepository) {
 
-    public void execute(UUID id){
+    public void execute(UUID id) {
         paymentMethodRepository.findById(id).ifPresentOrElse(paymentMethod -> {
             paymentMethodRepository.delete(paymentMethod);
             log.info("Metodo de Pagamento deletado com sucesso! id {}", id);

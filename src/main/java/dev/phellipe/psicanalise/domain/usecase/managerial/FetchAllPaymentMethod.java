@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @Component
 public record FetchAllPaymentMethod(PaymentMethodRepositoryFacade paymentMethodRepository) {
-    public Page<PaymentMethod> execute(Pageable pageable){
+    public Page<PaymentMethod> execute(Pageable pageable) {
         log.info("Buscando todos os Metodo de Pagamentos");
         return paymentMethodRepository.findAll(pageable);
     }

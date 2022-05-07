@@ -9,7 +9,6 @@ public abstract class URLRequestMappers {
     public static final String SESSION_API_BY_ID = "/{id}";
 
 
-
     public static final String PAYMENT_METHOD_API = V1_API + "/payment-methods";
     public static final String PAYMENT_METHOD_API_BY_ID = "/{id}";
 }
