@@ -12,7 +12,7 @@ import java.util.Optional;
 @ToString
 public class Contact {
     private String phone;
-    private String ContactPhone;
+    private String contactPhone;
     private String email;
 
     private void validate() {

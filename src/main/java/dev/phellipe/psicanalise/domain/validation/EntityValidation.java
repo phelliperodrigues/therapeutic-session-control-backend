@@ -1,7 +1,6 @@
 package dev.phellipe.psicanalise.domain.validation;
 
 import dev.phellipe.psicanalise.domain.exceptions.ValidationException;
-import lombok.NoArgsConstructor;
 
 import java.util.List;
 

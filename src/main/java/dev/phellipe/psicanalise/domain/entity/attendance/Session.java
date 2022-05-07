@@ -1,7 +1,7 @@
 package dev.phellipe.psicanalise.domain.entity.attendance;
 
-import dev.phellipe.psicanalise.domain.validation.attendance.SessionValidation;
 import dev.phellipe.psicanalise.domain.entity.customer.Customer;
+import dev.phellipe.psicanalise.domain.validation.attendance.SessionValidation;
 import lombok.*;
 
 import java.time.LocalDateTime;

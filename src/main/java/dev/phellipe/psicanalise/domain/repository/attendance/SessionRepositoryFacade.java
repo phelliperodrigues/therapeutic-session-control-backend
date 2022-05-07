@@ -1,7 +1,6 @@
 package dev.phellipe.psicanalise.domain.repository.attendance;
 
 import dev.phellipe.psicanalise.domain.entity.attendance.Session;
-import dev.phellipe.psicanalise.domain.entity.customer.Customer;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

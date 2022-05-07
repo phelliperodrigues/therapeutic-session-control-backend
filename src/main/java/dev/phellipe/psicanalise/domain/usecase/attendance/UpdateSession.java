@@ -1,9 +1,7 @@
 package dev.phellipe.psicanalise.domain.usecase.attendance;
 
 import dev.phellipe.psicanalise.domain.entity.attendance.Session;
-import dev.phellipe.psicanalise.domain.entity.customer.Customer;
 import dev.phellipe.psicanalise.domain.repository.attendance.SessionRepositoryFacade;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
@@ -13,7 +11,6 @@ import java.util.UUID;
 
 @Slf4j
 @Component
-@RequiredArgsConstructor
 public record UpdateSession(SessionRepositoryFacade repositoryFacade) {
 
     public Session execute(UUID id, Session session) {

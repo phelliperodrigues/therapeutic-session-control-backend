@@ -1,7 +1,7 @@
 package dev.phellipe.psicanalise.domain.entity.customer;
 
-import dev.phellipe.psicanalise.domain.validation.customer.CustomerValidation;
 import dev.phellipe.psicanalise.domain.entity.managerial.PaymentMethod;
+import dev.phellipe.psicanalise.domain.validation.customer.CustomerValidation;
 import lombok.*;
 
 import java.util.HashSet;

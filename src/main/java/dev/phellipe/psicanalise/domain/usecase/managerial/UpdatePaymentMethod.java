@@ -2,7 +2,6 @@ package dev.phellipe.psicanalise.domain.usecase.managerial;
 
 import dev.phellipe.psicanalise.domain.entity.managerial.PaymentMethod;
 import dev.phellipe.psicanalise.domain.repository.managerial.PaymentMethodRepositoryFacade;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
@@ -12,7 +11,6 @@ import java.util.UUID;
 
 @Slf4j
 @Component
-@RequiredArgsConstructor
 public record UpdatePaymentMethod(PaymentMethodRepositoryFacade paymentMethodRepository) {
 
     public PaymentMethod execute(UUID id, PaymentMethod paymentMethod) {
