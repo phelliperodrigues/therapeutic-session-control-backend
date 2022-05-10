@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1652146806886-6
+      author: Phellipe Rodrigues
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addUniqueConstraint:
+            columnNames: document_number
+            constraintName: uc_customers_document_number
+            tableName: customers
+        - addUniqueConstraint:
+            columnNames: rg
+            constraintName: uc_customers_rg
+            tableName: customers
+

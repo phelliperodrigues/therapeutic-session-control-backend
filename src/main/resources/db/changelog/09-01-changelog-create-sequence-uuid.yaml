@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1652146806886-1
+      author: Phellipe Rodrigues
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createSequence:
+            incrementBy: 1
+            sequenceName: uuid
+            startValue: 1
+

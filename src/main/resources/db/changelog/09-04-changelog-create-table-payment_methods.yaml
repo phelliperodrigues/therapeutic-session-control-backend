@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1652146806886-4
+      author: Phellipe Rodrigues
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_payment_methods
+                  name: id
+                  type: UUID
+              - column:
+                  constraints:
+                    nullable: false
+                  name: description
+                  type: VARCHAR(255)
+            tableName: payment_methods
+

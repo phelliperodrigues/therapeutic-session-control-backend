@@ -1,0 +1,24 @@
+databaseChangeLog:
+    - changeSet:
+          id: 1652146806886-9
+          author: Phellipe Rodrigues
+          objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+          changes:
+              - addForeignKeyConstraint:
+                    baseColumnNames: customer_id
+                    baseTableName: customers_payment_methods
+                    constraintName: fk_cuspaymet_on_customer_model
+                    referencedColumnNames: id
+                    referencedTableName: customers
+    - changeSet:
+          id: 1652146806886-10
+          author: Phellipe Rodrigues
+          objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+          changes:
+              - addForeignKeyConstraint:
+                    baseColumnNames: payment_method_id
+                    baseTableName: customers_payment_methods
+                    constraintName: fk_cuspaymet_on_payment_method_model
+                    referencedColumnNames: id
+                    referencedTableName: payment_methods
+

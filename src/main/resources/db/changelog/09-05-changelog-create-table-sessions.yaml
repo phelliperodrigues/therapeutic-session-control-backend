@@ -1,0 +1,36 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1652146806886-5
+      author: Phellipe Rodrigues
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_sessions
+                  name: id
+                  type: UUID
+              - column:
+                  constraints:
+                    foreignKeyName: FK_SESSIONS_ON_CUSTOMER
+                    references: customers(id)
+                  name: customer_id
+                  type: UUID
+              - column:
+                  constraints:
+                    nullable: false
+                  name: schedule
+                  type: DATETIME
+              - column:
+                  constraints:
+                    nullable: false
+                  name: value
+                  type: DOUBLE
+              - column:
+                  name: observation
+                  type: VARCHAR(255)
+            tableName: sessions
+

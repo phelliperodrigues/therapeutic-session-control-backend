@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1652146806886-8
+      author: Phellipe Rodrigues
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addUniqueConstraint:
+            columnNames: description
+            constraintName: uc_payment_methods_description
+            tableName: payment_methods
+
