@@ -1,6 +1,7 @@
 package dev.phellipe.psicanalise.domain.usecase.customer;
 
 import dev.phellipe.psicanalise.domain.repository.customer.CustomerRepositoryFacade;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
@@ -10,7 +11,10 @@ import java.util.UUID;
 
 @Slf4j
 @Component
-public record DeleteCustomer(CustomerRepositoryFacade customerRepository) {
+@RequiredArgsConstructor
+public final class DeleteCustomer {
+
+    private final CustomerRepositoryFacade customerRepository;
 
     public void execute(UUID id) {
         customerRepository.findById(id).ifPresentOrElse(customer -> {

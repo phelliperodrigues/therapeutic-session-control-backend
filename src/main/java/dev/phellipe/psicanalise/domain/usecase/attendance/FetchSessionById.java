@@ -2,6 +2,7 @@ package dev.phellipe.psicanalise.domain.usecase.attendance;
 
 import dev.phellipe.psicanalise.domain.entity.attendance.Session;
 import dev.phellipe.psicanalise.domain.repository.attendance.SessionRepositoryFacade;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
@@ -11,7 +12,9 @@ import java.util.UUID;
 
 @Slf4j
 @Component
-public record FetchSessionById(SessionRepositoryFacade repositoryFacade) {
+@RequiredArgsConstructor
+public class FetchSessionById {
+    private final SessionRepositoryFacade repositoryFacade;
 
     public Session execute(UUID id) {
         log.info("Buscando sessão com id {}", id);

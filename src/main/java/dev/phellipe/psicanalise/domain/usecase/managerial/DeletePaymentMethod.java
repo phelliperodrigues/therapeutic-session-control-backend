@@ -1,6 +1,7 @@
 package dev.phellipe.psicanalise.domain.usecase.managerial;
 
 import dev.phellipe.psicanalise.domain.repository.managerial.PaymentMethodRepositoryFacade;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
@@ -10,7 +11,9 @@ import java.util.UUID;
 
 @Slf4j
 @Component
-public record DeletePaymentMethod(PaymentMethodRepositoryFacade paymentMethodRepository) {
+@RequiredArgsConstructor
+public class DeletePaymentMethod {
+    private final PaymentMethodRepositoryFacade paymentMethodRepository;
 
     public void execute(UUID id) {
         paymentMethodRepository.findById(id).ifPresentOrElse(paymentMethod -> {

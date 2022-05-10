@@ -2,6 +2,7 @@ package dev.phellipe.psicanalise.domain.usecase.customer;
 
 import dev.phellipe.psicanalise.domain.entity.customer.Customer;
 import dev.phellipe.psicanalise.domain.repository.customer.CustomerRepositoryFacade;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
@@ -11,7 +12,9 @@ import java.util.UUID;
 
 @Slf4j
 @Component
-public record UpdateCustomer(CustomerRepositoryFacade customerRepository) {
+@RequiredArgsConstructor
+public class UpdateCustomer {
+    private final CustomerRepositoryFacade customerRepository;
 
     public Customer execute(UUID id, Customer customer) {
         return customerRepository.findById(id).map(fetch -> {
