@@ -17,5 +17,5 @@ public class SessionResponse {
     private CustomerResponse customer;
     private LocalDateTime schedule;
     private double value;
-    private String observation;
+    private String annotation;
 }

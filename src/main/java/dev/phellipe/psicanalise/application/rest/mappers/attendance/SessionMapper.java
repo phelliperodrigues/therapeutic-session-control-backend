@@ -37,7 +37,7 @@ public class SessionMapper {
                 .customer(CustomerMapper.convertToResponse(session.getCustomer()))
                 .schedule(session.getSchedule())
                 .value(session.getValue())
-                .observation(session.getObservation())
+                .annotation(session.getObservation())
                 .build();
     }
 
